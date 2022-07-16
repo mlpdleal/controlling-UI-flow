@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		EA69C9D7288315CF00733770 /* TabViewExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69C9D6288315CF00733770 /* TabViewExample.swift */; };
+		EA7E4FA828831ADE00F1AF2F /* ManuallyPublisingObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E4FA728831ADE00F1AF2F /* ManuallyPublisingObservableObject.swift */; };
+		EA7E4FAA2883217E00F1AF2F /* ResultTypeExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E4FA92883217E00F1AF2F /* ResultTypeExample.swift */; };
+		EA7E4FAC2883253B00F1AF2F /* ImageInterpolationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E4FAB2883253B00F1AF2F /* ImageInterpolationExample.swift */; };
 		EAFB753628830786000C15CF /* HotProspectExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFB753528830786000C15CF /* HotProspectExampleApp.swift */; };
 		EAFB753828830786000C15CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFB753728830786000C15CF /* ContentView.swift */; };
 		EAFB753A28830787000C15CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAFB753928830787000C15CF /* Assets.xcassets */; };
@@ -16,6 +19,9 @@
 
 /* Begin PBXFileReference section */
 		EA69C9D6288315CF00733770 /* TabViewExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewExample.swift; sourceTree = "<group>"; };
+		EA7E4FA728831ADE00F1AF2F /* ManuallyPublisingObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManuallyPublisingObservableObject.swift; sourceTree = "<group>"; };
+		EA7E4FA92883217E00F1AF2F /* ResultTypeExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTypeExample.swift; sourceTree = "<group>"; };
+		EA7E4FAB2883253B00F1AF2F /* ImageInterpolationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInterpolationExample.swift; sourceTree = "<group>"; };
 		EAFB753228830786000C15CF /* HotProspectExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspectExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFB753528830786000C15CF /* HotProspectExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectExampleApp.swift; sourceTree = "<group>"; };
 		EAFB753728830786000C15CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +62,9 @@
 				EAFB753528830786000C15CF /* HotProspectExampleApp.swift */,
 				EAFB753728830786000C15CF /* ContentView.swift */,
 				EA69C9D6288315CF00733770 /* TabViewExample.swift */,
+				EA7E4FA728831ADE00F1AF2F /* ManuallyPublisingObservableObject.swift */,
+				EA7E4FA92883217E00F1AF2F /* ResultTypeExample.swift */,
+				EA7E4FAB2883253B00F1AF2F /* ImageInterpolationExample.swift */,
 				EAFB753928830787000C15CF /* Assets.xcassets */,
 				EAFB753B28830787000C15CF /* Preview Content */,
 			);
@@ -142,7 +151,10 @@
 			files = (
 				EAFB753828830786000C15CF /* ContentView.swift in Sources */,
 				EA69C9D7288315CF00733770 /* TabViewExample.swift in Sources */,
+				EA7E4FA828831ADE00F1AF2F /* ManuallyPublisingObservableObject.swift in Sources */,
 				EAFB753628830786000C15CF /* HotProspectExampleApp.swift in Sources */,
+				EA7E4FAA2883217E00F1AF2F /* ResultTypeExample.swift in Sources */,
+				EA7E4FAC2883253B00F1AF2F /* ImageInterpolationExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
