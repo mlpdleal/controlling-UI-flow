@@ -13,6 +13,8 @@
 		EA7E4FC128832A4200F1AF2F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7E4FC028832A4200F1AF2F /* Preview Assets.xcassets */; };
 		EA7E4FC82884F87000F1AF2F /* SwipeRowExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E4FC72884F87000F1AF2F /* SwipeRowExample.swift */; };
 		EA7E4FCA2884FA2D00F1AF2F /* NotificationsExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E4FC92884FA2D00F1AF2F /* NotificationsExample.swift */; };
+		EA7E4FCD2884FF1600F1AF2F /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = EA7E4FCC2884FF1600F1AF2F /* SamplePackage */; };
+		EA7E4FCF2884FF3100F1AF2F /* PackageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7E4FCE2884FF3100F1AF2F /* PackageExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		EA7E4FC028832A4200F1AF2F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA7E4FC72884F87000F1AF2F /* SwipeRowExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeRowExample.swift; sourceTree = "<group>"; };
 		EA7E4FC92884FA2D00F1AF2F /* NotificationsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsExample.swift; sourceTree = "<group>"; };
+		EA7E4FCE2884FF3100F1AF2F /* PackageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7E4FCD2884FF1600F1AF2F /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,7 @@
 				EA7E4FC92884FA2D00F1AF2F /* NotificationsExample.swift */,
 				EA7E4FBD28832A4200F1AF2F /* Assets.xcassets */,
 				EA7E4FBF28832A4200F1AF2F /* Preview Content */,
+				EA7E4FCE2884FF3100F1AF2F /* PackageExample.swift */,
 			);
 			path = NecessaryExample;
 			sourceTree = "<group>";
@@ -89,6 +94,9 @@
 			dependencies = (
 			);
 			name = NecessaryExample;
+			packageProductDependencies = (
+				EA7E4FCC2884FF1600F1AF2F /* SamplePackage */,
+			);
 			productName = NecessaryExample;
 			productReference = EA7E4FB628832A4000F1AF2F /* NecessaryExample.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +125,9 @@
 				Base,
 			);
 			mainGroup = EA7E4FAD28832A4000F1AF2F;
+			packageReferences = (
+				EA7E4FCB2884FF1600F1AF2F /* XCRemoteSwiftPackageReference "SamplePackage" */,
+			);
 			productRefGroup = EA7E4FB728832A4000F1AF2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,6 +158,7 @@
 				EA7E4FC82884F87000F1AF2F /* SwipeRowExample.swift in Sources */,
 				EA7E4FBA28832A4000F1AF2F /* NecessaryExampleApp.swift in Sources */,
 				EA7E4FCA2884FA2D00F1AF2F /* NotificationsExample.swift in Sources */,
+				EA7E4FCF2884FF3100F1AF2F /* PackageExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EA7E4FCB2884FF1600F1AF2F /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EA7E4FCC2884FF1600F1AF2F /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EA7E4FCB2884FF1600F1AF2F /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA7E4FAE28832A4000F1AF2F /* Project object */;
 }
