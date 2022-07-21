@@ -17,59 +17,103 @@ struct ProspectsView: View {
     
     @EnvironmentObject var prospects: Prospects
     @State private var isShowingScanner = false
+    @State private var isShowingConfirmationDialog = false
+    @State private var isByName = false
+    @State private var isByDate = false
+   
     
     let filter: FilterType
     
     var body: some View {
         NavigationView{
+            
             List{
                 ForEach(filteredProspects) { prospect in
+                    HStack{
+                    
+                    if prospect.isContacted {
+                        Image(systemName: "person.crop.circle.fill.badge.checkmark")
+                            .foregroundColor(.green)
+                    } else {
+                        Image(systemName: "person.crop.circle.badge.xmark")
+                            .foregroundColor(.orange)
+                        
+                    }
                     VStack(alignment: .leading){
+                        
+                        
                         Text(prospect.name)
                             .font(.headline)
                         
                         Text(prospect.emailAddress)
                             .foregroundColor(.secondary)
                     }
-                    .swipeActions{
-                        if prospect.isContacted{
-                            Button {
-                                prospects.toggle(prospect)
-                            } label: {
-                                Label("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark")
-                            }
-                            .tint(.blue)
-                        } else {
-                            Button {
-                                prospects.toggle(prospect)
-                            } label: {
-                                Label("Mark Contacted", systemImage: "person.crop.circle.fill.badge.checkmark")
-                            }
-                            .tint(.green)
-                            
-                            Button {
-                                addNotification(for: prospect)
-                            } label: {
-                                Label("Remind me", systemImage: "bell")
-                            }
-                            .tint(.orange)
-                        }
-                            
-                    }
+    
                 }
+    
+                    .swipeActions{
+                    if prospect.isContacted{
+                        Button {
+                            prospects.toggle(prospect)
+                        } label: {
+                            Label("Mark Uncontacted", systemImage: "person.crop.circle.badge.xmark")
+                        }
+                        .tint(.blue)
+                    } else {
+                        Button {
+                            prospects.toggle(prospect)
+                        } label: {
+                            Label("Mark Contacted", systemImage: "person.crop.circle.fill.badge.checkmark")
+                        }
+                        .tint(.green)
+                        
+                        Button {
+                            addNotification(for: prospect)
+                        } label: {
+                            Label("Remind me", systemImage: "bell")
+                        }
+                        .tint(.orange)
+                    }
+                        
+                }
+                    
+                }
+                
             }
                 .navigationTitle(title)
                 .toolbar{
-                    Button{
-                        isShowingScanner = true
-                    } label: {
-                        Label("Scan", systemImage: "qrcode.viewfinder")
+                    ToolbarItem{
+                        Button{
+                            isShowingScanner = true
+                        } label: {
+                            Label("Scan", systemImage: "qrcode.viewfinder")
+                        }
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarLeading){
+                        Button{
+                            isShowingConfirmationDialog = true
+                        } label: {
+                            Label("Sort", systemImage: "arrow.up.arrow.down.square")
+                        }
                     }
                 }
                 .sheet(isPresented: $isShowingScanner) {
                     CodeScannerView(codeTypes: [.qr], simulatedData: "Paul Hudson\npaul@hackingwithswift.com", completion: handleScan)
                 }
-                
+                .confirmationDialog("Sort", isPresented: $isShowingConfirmationDialog){
+                    Group{
+                        Button("By Name"){
+                            isByName = true
+                            isByDate = false
+                        }
+                        Button("By Date"){
+                            isByName = false
+                            isByDate = true
+                        }
+                    }
+                }
+            
         }
     }
     
@@ -87,7 +131,17 @@ struct ProspectsView: View {
     var filteredProspects: [Prospect]{
         switch filter {
         case .none:
-            return prospects.people
+            if isByName{
+                return prospects.people.sorted{
+                    $0.name < $1.name
+                }
+            } else if isByDate {
+                return prospects.people.sorted{
+                    $0.date < $1.date
+                }
+            } else {
+                return prospects.people
+            }
         case .contacted:
             return prospects.people.filter { $0.isContacted }
         case .uncontacted:

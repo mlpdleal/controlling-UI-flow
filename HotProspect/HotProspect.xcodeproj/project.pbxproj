@@ -16,6 +16,7 @@
 		EA9743E5288631DF00CE3EFB /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9743E4288631DF00CE3EFB /* Prospect.swift */; };
 		EA9743E82887703800CE3EFB /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = EA9743E72887703800CE3EFB /* CodeScanner */; };
 		EA9743EA2887838B00CE3EFB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9743E92887838B00CE3EFB /* ImageSaver.swift */; };
+		EA9743EC2888DC9500CE3EFB /* FileManager-DocumentDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9743EB2888DC9500CE3EFB /* FileManager-DocumentDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EA9743E228862E2E00CE3EFB /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		EA9743E4288631DF00CE3EFB /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		EA9743E92887838B00CE3EFB /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		EA9743EB2888DC9500CE3EFB /* FileManager-DocumentDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				EA9743E028862E2500CE3EFB /* ProspectsView.swift */,
 				EA9743E228862E2E00CE3EFB /* MeView.swift */,
 				EA9743E92887838B00CE3EFB /* ImageSaver.swift */,
+				EA9743EB2888DC9500CE3EFB /* FileManager-DocumentDirectory.swift */,
 				EA9743D628862A8400CE3EFB /* Assets.xcassets */,
 				EA9743D828862A8400CE3EFB /* Preview Content */,
 			);
@@ -162,6 +165,7 @@
 				EA9743E5288631DF00CE3EFB /* Prospect.swift in Sources */,
 				EA9743E128862E2500CE3EFB /* ProspectsView.swift in Sources */,
 				EA9743D528862A8300CE3EFB /* ContentView.swift in Sources */,
+				EA9743EC2888DC9500CE3EFB /* FileManager-DocumentDirectory.swift in Sources */,
 				EA9743D328862A8300CE3EFB /* HotProspectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
