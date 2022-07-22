@@ -21,17 +21,7 @@ class Prospect: Identifiable, Codable{
     let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedData")
     
     init() {
-        
-//        if let data = UserDefaults.standard.data(forKey: saveKey){
-//            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data){
-//                people = decoded
-//                return
-//            }
-//        }
-//
-//
-//        people = []
-        
+                
         do{
             let data = try Data(contentsOf: savePath)
             people = try JSONDecoder().decode([Prospect].self, from: data)
@@ -42,10 +32,7 @@ class Prospect: Identifiable, Codable{
     }
     
     private func save() {
-//        if let encoded = try? JSONEncoder().encode(people){
-//            UserDefaults.standard.set(encoded, forKey: saveKey)
-//        }
-        
+
         do{
             let data = try JSONEncoder().encode(people)
             try data.write(to: savePath, options: [.atomicWrite, .completeFileProtection])
