@@ -19,7 +19,9 @@ struct EditCards: View {
             List {
                 Section("Add new card"){
                     TextField("Prompt", text: $newPrompt)
+                        .keyboardType(.asciiCapable)
                     TextField("Answer", text: $newAnswer)
+                        .keyboardType(.asciiCapable)
                     Button("Add card", action: addCard)
                 }
                 
@@ -72,6 +74,8 @@ struct EditCards: View {
         let card = Card(prompt: trimmedPrompt, answer: trimmedAnswer)
         cards.insert(card, at: 0)
         saveData()
+        newPrompt = ""
+        newAnswer = ""
     }
     
     func removeCards(at offsets: IndexSet){

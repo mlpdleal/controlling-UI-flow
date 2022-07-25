@@ -42,11 +42,11 @@ struct CardView: View {
                         .font(.largeTitle)
                         .foregroundColor(.black)
                 } else {
-                    Text(Card.example.prompt)
+                    Text(card.prompt)
                         .font(.largeTitle)
                         .foregroundColor(.black)
                     if isShowingAnswer{
-                        Text(Card.example.answer)
+                        Text(card.answer)
                             .font(.title)
                             .foregroundColor(.gray)
                     }
@@ -72,13 +72,16 @@ struct CardView: View {
                         
                         if offset.width > 0 {
                             feedback.notificationOccurred(.success)
+                            
                         } else {
                             feedback.notificationOccurred(.error)
                         }
                         
                         removal?()
                     } else {
-                        offset = .zero
+                        withAnimation{
+                            offset = .zero
+                        }
                     }
                 }
         )
@@ -92,6 +95,6 @@ struct CardView: View {
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView(card: Card.example)
-            .previewInterfaceOrientation(.portraitUpsideDown)
+            .previewInterfaceOrientation(.landscapeRight)
     }
 }

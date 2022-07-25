@@ -94,6 +94,7 @@ struct ContentView: View {
                         Button {
                             withAnimation{
                                 removeCard(at: cards.count - 1)
+                               
                             }
                         } label: {
                             
@@ -165,6 +166,14 @@ struct ContentView: View {
         if cards.isEmpty{
             isActive = false
         }
+    }
+    
+    func addCardAtFinal(index: Int){
+        let newPrompt = cards[index].prompt
+        let newAnswer = cards[index].answer
+        let newCard = Card(prompt: newPrompt, answer: newAnswer)
+        
+        cards.append(newCard)
     }
     
     func resetCard() {
