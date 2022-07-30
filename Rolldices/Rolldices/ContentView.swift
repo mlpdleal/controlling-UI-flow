@@ -86,7 +86,7 @@ struct ContentView: View {
                 
                 
             }
-            .navigationTitle("Row Dices")
+            .navigationTitle("Roll Dices")
             
         }
     }
