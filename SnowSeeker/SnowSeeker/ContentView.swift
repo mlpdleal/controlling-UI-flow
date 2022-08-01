@@ -23,6 +23,7 @@ struct ContentView: View {
     
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
+    @StateObject var favorites = Favorites()
     @State private var searchText = ""
     
     var body: some View {
@@ -31,6 +32,7 @@ struct ContentView: View {
                 NavigationLink{
                     ResortView(resort: resort)
                 } label: {
+                    HStack{
                     Image(resort.country)
                         .resizable()
                         .scaledToFill()
@@ -47,7 +49,15 @@ struct ContentView: View {
                         Text("\(resort.runs)")
                             .foregroundColor(.secondary)
                     }
+                    
+                    if favorites.contains(resort){
+                        Spacer()
+                        Image(systemName: "heart.fill")
+                            .accessibilityLabel("This is a favorite resort")
+                            .foregroundColor(.red)
+                    }
                   
+                }
                 }
             }
             .navigationTitle("Resorts")
@@ -56,6 +66,7 @@ struct ContentView: View {
             WelcomeView()
         }
         .phoneOnlynavigationView()
+        .environmentObject(favorites)
     }
     
     var filteredResorts: [Resort]{
