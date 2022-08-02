@@ -20,6 +20,7 @@
 		EAE4752928973FCA00358EDB /* ResortDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4752828973FCA00358EDB /* ResortDetailsView.swift */; };
 		EAE4752B289882EB00358EDB /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4752A289882EB00358EDB /* Facility.swift */; };
 		EAE4752D2898877500358EDB /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4752C2898877500358EDB /* Favorites.swift */; };
+		EAE4752F2898A6D500358EDB /* File-manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE4752E2898A6D500358EDB /* File-manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		EAE4752828973FCA00358EDB /* ResortDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortDetailsView.swift; sourceTree = "<group>"; };
 		EAE4752A289882EB00358EDB /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
 		EAE4752C2898877500358EDB /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
+		EAE4752E2898A6D500358EDB /* File-manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "File-manager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				EAE4752828973FCA00358EDB /* ResortDetailsView.swift */,
 				EAE4751D2896D94900358EDB /* Resort.swift */,
 				EAE4751F2896DA4400358EDB /* Bundle-Decodable.swift */,
+				EAE4752E2898A6D500358EDB /* File-manager.swift */,
 				EAE475112896D85000358EDB /* Assets.xcassets */,
 				EAE4751B2896D8A200358EDB /* resorts.json */,
 				EAE475132896D85000358EDB /* Preview Content */,
@@ -170,6 +173,7 @@
 				EAE4752928973FCA00358EDB /* ResortDetailsView.swift in Sources */,
 				EAE4752D2898877500358EDB /* Favorites.swift in Sources */,
 				EAE4752B289882EB00358EDB /* Facility.swift in Sources */,
+				EAE4752F2898A6D500358EDB /* File-manager.swift in Sources */,
 				EAE475102896D84F00358EDB /* ContentView.swift in Sources */,
 				EAE4751E2896D94900358EDB /* Resort.swift in Sources */,
 				EAE475242896E81300358EDB /* ResortView.swift in Sources */,
@@ -306,6 +310,7 @@
 				DEVELOPMENT_TEAM = 8Q4G5PRJJ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "we need to save data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -335,6 +340,7 @@
 				DEVELOPMENT_TEAM = 8Q4G5PRJJ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "we need to save data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

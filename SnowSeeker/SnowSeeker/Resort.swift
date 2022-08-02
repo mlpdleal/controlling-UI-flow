@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Resort: Codable, Identifiable{
+struct Resort: Codable, Identifiable, Comparable{
+    static func < (lhs: Resort, rhs: Resort) -> Bool {
+        lhs.name < rhs.name
+    }
+    
     let id: String
     let name: String
     let country: String

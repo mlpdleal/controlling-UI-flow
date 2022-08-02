@@ -26,7 +26,13 @@ struct ResortView: View {
                     .resizable()
                     .scaledToFit()
                 
+                Text("Image by: \(resort.imageCredit)")
+                    .font(.caption)
+                    .foregroundColor(.secondary)
+                    .padding(.horizontal)
+                
                 HStack{
+                    
                     if sizeClass == .compact && typeSize > .large {
                         VStack(spacing: 10) { ResortDetailsView(resort: resort) }
                         VStack(spacing: 10) { SkiDetailsView(resort: resort) }
